@@ -1,0 +1,236 @@
+body {
+    background-image: linear-gradient(to right, #f2f1f1, rgba(0, 0, 0, 0)), url(https://grainy-gradients.vercel.app/noise.svg);
+    font-family: "Source Code Pro", monospace;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/*container styles*/
+#container {
+    width: 1000px; /* width of container*/
+    margin: 0 auto; /* auto will automatically calculate the left and right margin*/
+    
+}
+
+/*header styles*/
+#header {
+    height: 180px;
+    margin: 20px 0 0 0;
+    background: url(images/pen.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+}
+
+/*content styles */
+#content {
+    border-right: 1px solid #543913;
+    border-left: 1px solid #543913;
+    border-bottom: 1px solid #543913; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 40px;
+    height: auto; /* Let height adjust to content */
+    overflow: visible;    /* Ensure content is not hidden */
+}
+
+#content a {
+    color: #543913; 
+    text-decoration: none; /* remove underline */
+    font-weight: bold;
+}
+
+/* Hover effect for links inside #content */
+#content a:hover {
+    color: #cc0000; /* change to deep red on hover */
+    text-decoration: underline; /* underline on hover */
+}
+
+
+/*nav styles*/
+#nav {
+    width: 1000px;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+
+#nav a:first-child {
+    border-radius: 12px 0 0 0;
+}
+
+#nav a:last-child {
+    border-radius: 0 12px 0 0;
+}
+
+
+#nav a{
+    width: 199px;
+    height: 35px;
+    float: left;
+    padding: 12px 0 0 0;
+    background: url(images/nav1.jpg);
+    border-right: 1px outset #543913;
+    background-size: cover;
+    text-align: center; /* Set the text-align of the link elements to center */
+    text-decoration: none; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    color: #ffffff; 
+}
+
+
+#nav a:hover {
+  background: url(images/nav_hove.jpg);
+}
+
+h1 {
+  color: #543913;            
+  margin-bottom: 0.5px;     
+  padding-left: 10px;
+}
+
+h2 {
+  color: #543913;            
+  margin-bottom: 0.5px;     
+  padding-left: 10px;
+  border-left: 4px solid #543913;
+}
+
+
+em {
+  color: #543913;       
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+/* Blockquote */
+blockquote {
+  font-size: 14px;
+  margin-left: 20px;
+  border-left: 4px solid #543913; /* Purple left border for emphasis */
+  padding-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/*image styles*/
+.round {
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Description text */
+.portfolio-item p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+
+/* Style each video-description block */
+.portfolio-item {
+  display: inline-block;           /* allows inline layout */
+  margin: 10px;
+  width: 280px;
+  height: 250px;
+  vertical-align: top;
+  text-align: center;
+}
+
+/* Style the video element */
+.portfolio-item video {
+  width: 100%;
+  height: 100%;                    /* Make video fill the entire .portfolio-item */
+  object-fit: cover;              /* Maintain aspect ratio and fill container */
+  border-radius: 12px;            /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+
+.portfolio-item video:hover {
+  transform: scale(1.03);
+}
+
+.div1 {
+    padding-bottom: 70px;
+}
+
+.poems {
+    border-radius: 15px;
+    display: inline-block;           /* allows inline layout */
+    margin: 15px;
+}
+
+
+/*table styles*/
+table {
+    width: 100%;
+    border: 1px solid #543913;  /* Adds a solid black border around the whole table */
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 30px;
+}
+
+table th {
+    font-weight: 500;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+table tr{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.grey {
+    background-color: #b9ad9d;
+    line-height: 1.4; /* line spacing */
+    
+}
+
+dt {
+  font-style: italic;
+  font-size: 12pt;
+  color: #333333;
+  margin-top: 10px;
+}
+
+
+dd {
+  font-style: italic;
+  font-size: 10pt;
+  color: #543913;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.maps {
+    margin-bottom: 20px; 
+    padding: 20px;
+    
+}
+
+.map {
+	height:500px;
+	width:100%;
+    padding-bottom: 20px;
+}
+
+#mail img {
+    width: 5%;
+    margin-top: 20px;
+    
+}
+
+/*footer styles*/
+#footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
