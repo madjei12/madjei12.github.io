@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maps</title> <!-- The title that appears in the browser tab -->
+        <link rel="stylesheet" type="text/css" href="styles.css"> <!--  link the styles file  -->
+    </head> <!-- -->
+
+    <body>
+        <!-- Main container for the entire page content -->
+        <div id="container">
+            <div id="header">
+
+            </div>
+
+            <!-- Navigation menu -->
+            <div id="nav">
+                 <!-- Navigation links to different pages -->
+                <a class="active" href="index.html">Home</a> <!-- recheck the active sign-->
+                <a href="interests.html">Interests</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="maps.html">Maps</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <!-- Main content area -->
+            <div id="content">
+                        <h2>Forest Loss Maps</h2>
+                        <br>
+                        <img src="images/bef_1307.jpg" alt="Forest in July 2013" class="forest" />
+                        <br>
+                        <br>
+                        <img src="images/aft_1309.jpg" alt="Forest in September 2013" class="forest" />
+                        <br>
+                        <br>
+                        <p>Download files:
+                            <a href="forest/forest.kmz">Forest</a> |
+                            <a href="forest/disturbed.kmz">Disturbed Forest</a>
+                        </p>
+
+                    <h2 class="maps">Online Maps:</h2>
+                    <div class="map"> 
+                        <!-- Add script to the <head> of your page to load the embeddable map component -->
+                        <script type="module" src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
+                        <!-- Add custom element to <body> of your page -->
+                        <arcgis-embedded-map item-id="4b78d44849f043c9b6ff2d4d1cd8a7f2" theme="light" heading-enabled portal-url="https://uofmd.maps.arcgis.com" ></arcgis-embedded-map>
+                    </div>
+
+                <div class="map">
+                    <!-- Add script to the <head> of your page to load the embeddable map component -->
+                    <script type="module" src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
+                    <!-- Add custom element to <body> of your page -->
+                    <arcgis-embedded-map item-id="8a5eae611e1143e0a30968785c6ba8a2" theme="light" heading-enabled portal-url="https://uofmd.maps.arcgis.com" ></arcgis-embedded-map>
+                </div>
+            </div>
+
+            <!-- Footer section -->
+            <div id="footer">
+               <p>&copy; Monica Adjei<br>Graduate Student, MSGIS<br>GEOG657, Lab 2</p>
+            </div>
+            
+        </div>
+    
+    </body>
+
+    </html>
