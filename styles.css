@@ -560,6 +560,60 @@ address {
   padding: 26px 0 40px;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--cream-deep);
+  border: 1px solid var(--line) !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--brand-dark) !important;
+  text-decoration: none !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  border-color: var(--brand) !important;
+}
+
+.social-links svg { flex-shrink: 0; }
+
+/* Disabled "coming soon" path card */
+.path-card.disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.path-card.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.path-card .soon {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  background: var(--line);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
 /* ============================================
    Responsive
    ============================================ */
