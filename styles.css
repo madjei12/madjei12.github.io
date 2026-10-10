@@ -281,27 +281,42 @@ blockquote {
 
 /* Event video cards */
 .video-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.portfolio-item {
-  width: 280px;
-  text-align: left;
-}
+.portfolio-item { text-align: left; }
 
 .portfolio-item video {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
   background: #000;
   transition: transform 0.3s ease;
 }
 
 .portfolio-item video:hover { transform: scale(1.02); }
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .portfolio-item p {
   margin: 10px 0 0;
@@ -342,52 +357,69 @@ blockquote {
 /* Gallery cover cards (event/poems entry points) */
 .cover-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .cover-card {
+  position: relative;
   display: block;
-  border-radius: var(--radius);
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
   overflow: hidden;
-  background: #fff;
-  border: 1px solid var(--line) !important;
+  background: var(--cream-deep);
+  border: none !important;
   box-shadow: var(--shadow);
   text-decoration: none !important;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .cover-card:hover { transform: translateY(-4px); }
 
-.cover-card .cover-img {
-  height: 170px;
-  overflow: hidden;
-  background: var(--cream-deep);
-}
-
-.cover-card .cover-img img {
+.cover-card img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: transform 0.4s ease;
 }
 
-.cover-card .cover-img.poems-cover img { object-fit: contain; }
+.cover-card:hover img { transform: scale(1.08); }
 
-.cover-card:hover .cover-img img { transform: scale(1.06); }
-
-.cover-card .cover-body { padding: 14px 18px 18px; }
+.cover-card .cover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(20, 15, 14, 0.88) 0%, rgba(20, 15, 14, 0.3) 45%, transparent 75%);
+}
 
 .cover-card h3 {
   margin: 0 0 4px;
   font-size: 1.05rem;
-  color: var(--brand-dark);
+  color: #fff;
+  line-height: 1.25;
 }
 
-.cover-card .cover-body span {
-  font-size: 0.82rem;
-  color: var(--ink-soft);
+.cover-card .cover-overlay span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
 }
+
+/* Poetry banner variant — wide single tile */
+.cover-grid.wide {
+  grid-template-columns: 1fr;
+}
+
+.cover-grid.wide .cover-card {
+  aspect-ratio: 16 / 6;
+}
+
+.cover-card.poems-tile img { object-fit: contain; }
 
 .back-link {
   display: inline-block;
@@ -548,7 +580,15 @@ address {
   #content { padding: 26px 22px; }
   .hero { padding: 32px 26px; min-height: 220px; }
   .path-grid { grid-template-columns: 1fr; }
-  .portfolio-item { width: 100%; }
+  .video-grid { grid-template-columns: 1fr; }
+  .cover-grid { grid-template-columns: 1fr; }
+  .cover-grid .cover-card { aspect-ratio: 16 / 10; }
+  .cover-grid.wide .cover-card { aspect-ratio: 16 / 9; }
   #nav a { font-size: 0.82rem; padding: 10px 10px; }
   .map { height: 360px; }
+}
+
+@media (max-width: 920px) and (min-width: 701px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+  .cover-grid:not(.wide) { grid-template-columns: repeat(2, 1fr); }
 }
