@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Photo gallery — Monica Adjei.">
+        <title>Gallery — Monica Adjei</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+        <a class="skip-link" href="#content">Skip to content</a>
+        <div id="container">
+            <div id="header">
+                <div class="hero">
+                    <div>
+                        <p class="hero-eyebrow">Arts Portfolio</p>
+                        <h1 id="gallery-title">Gallery</h1>
+                        <p id="gallery-intro"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nav">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html" class="active" aria-current="page">Arts Portfolio</a>
+                <a href="maps.html">GIS &amp; Remote Sensing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div id="content">
+                <p><a class="back-link" href="portfolio.html">&larr; Back to Arts Portfolio</a></p>
+                <div class="section-block" id="gallery-section">
+                    <div class="gallery" id="gallery-grid" data-gallery=""></div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <p>&copy; Monica Adjei &middot; Graduate Student, MSGIS</p>
+            </div>
+        </div>
+
+        <div id="lightbox">
+            <button class="lb-close" aria-label="Close">&times;</button>
+            <button class="lb-prev" aria-label="Previous">&#8249;</button>
+            <img src="" alt="">
+            <button class="lb-next" aria-label="Next">&#8250;</button>
+        </div>
+
+        <script src="gallery-data.js"></script>
+        <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var key = params.get("set");
+            var set = key && window.GALLERY_SETS[key];
+
+            var titleEl = document.getElementById("gallery-title");
+            var introEl = document.getElementById("gallery-intro");
+            var gridEl = document.getElementById("gallery-grid");
+            var sectionEl = document.getElementById("gallery-section");
+
+            if (!set) {
+                titleEl.textContent = "Gallery not found";
+                introEl.textContent = "Sorry, that gallery doesn't exist.";
+                return;
+            }
+
+            document.title = set.title + " — Monica Adjei";
+            titleEl.textContent = set.title;
+            introEl.textContent = set.intro;
+            if (set.variant === "poems") sectionEl.classList.add("poems");
+
+            var html = "";
+            for (var i = 1; i <= set.count; i++) {
+                var n = String(i).padStart(2, "0");
+                var thumb = "images/web/" + key + "/thumb/" + key + "-" + n + ".jpg";
+                var full = "images/web/" + key + "/full/" + key + "-" + n + ".jpg";
+                html += '<a href="' + full + '"><img src="' + thumb + '" alt="' + set.altPrefix + ' photo ' + i + '" loading="lazy"></a>';
+            }
+            gridEl.innerHTML = html;
+            gridEl.setAttribute("data-gallery", key);
+        })();
+        </script>
+        <script src="lightbox.js"></script>
+    </body>
+</html>

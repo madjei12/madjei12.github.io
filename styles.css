@@ -339,6 +339,63 @@ blockquote {
 
 .track audio { width: 100%; }
 
+/* Gallery cover cards (event/poems entry points) */
+.cover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.cover-card {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow);
+  text-decoration: none !important;
+  transition: transform 0.2s ease;
+}
+
+.cover-card:hover { transform: translateY(-4px); }
+
+.cover-card .cover-img {
+  height: 170px;
+  overflow: hidden;
+  background: var(--cream-deep);
+}
+
+.cover-card .cover-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.cover-card .cover-img.poems-cover img { object-fit: contain; }
+
+.cover-card:hover .cover-img img { transform: scale(1.06); }
+
+.cover-card .cover-body { padding: 14px 18px 18px; }
+
+.cover-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  color: var(--brand-dark);
+}
+
+.cover-card .cover-body span {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* Photo galleries + lightbox */
 .gallery {
   display: grid;
