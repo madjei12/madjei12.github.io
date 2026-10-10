@@ -3,95 +3,213 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Portfolio</title> <!-- The title that appears in the browser tab -->
-        <link rel="stylesheet" type="text/css" href="styles.css"> <!--  link the styles file  -->
-    </head> <!-- -->
+        <meta name="description" content="Arts portfolio of Monica Adjei — spoken word audio, live performance video, and event photography from poetry and public-speaking engagements.">
+        <title>Arts Portfolio — Monica Adjei</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
 
     <body>
-        <!-- Main container for the entire page content -->
+        <a class="skip-link" href="#content">Skip to content</a>
         <div id="container">
             <div id="header">
-
+                <div class="hero">
+                    <div>
+                        <p class="hero-eyebrow">Arts Portfolio</p>
+                        <h1>Spoken word, stage &amp; page</h1>
+                        <p>Audio recordings, live-event footage, and poetry from readings, forums, and cultural gatherings across the past few years.</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Navigation menu -->
             <div id="nav">
-                 <!-- Navigation links to different pages -->
-                <a href="index.html">Home</a> <!-- recheck the active sign-->
-                <a href="portfolio.html">Arts Portfolio</a>
-                <a href="maps.html">GIS & Remote Sensing</a>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html" class="active" aria-current="page">Arts Portfolio</a>
+                <a href="maps.html">GIS &amp; Remote Sensing</a>
                 <a href="contact.html">Contact</a>
-
             </div>
 
-            <!-- Main content area -->
             <div id="content">
-                <div class="div1">
-                    <h2>Events</h2>
-                    <div class="portfolio-item">
-                        <video width="300" height="300" controls>
-                        <source src="images/dsra.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>
-                        <p>Day of Scientific Renaissance of Africa <br> (2024)</p>
-                    </div>
 
-                    <div class="portfolio-item">
-                        <video width="300" height="300" controls>
-                        <source src="images/aam2024.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>
-                        <p>AfriCaribbean Trade and Investment Forum | Afreximbank Annual Meetings (2024)</p>
-                    </div>
-
-                    <div class="portfolio-item">
-                        <video width="300" height="300" controls>
-                        <source src="images/au.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>
-                        <p>AU|PeaceFund in Partnership with AfreximBank | The Africa We Want (2024)</p>
-                    </div>
-                </div>
-
-                <div class="div1">
+                <div class="section-block">
                     <h2>Spoken Word</h2>
-                    <p>These audio files features spoken word pieces I recorded in the studio for specific events:</p>
-                    <audio controls>
-                    <source src="images/hour.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                    </audio>
-
-                    <audio controls>
-                    <source src="images/woman.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                    </audio>
-                </div>
-
-                <div class="div1">
-                    <h2>Poetry</h2>
-                    <div >
-                        <img src="images/15.jpg" alt="Ms. Monica Adjei" width="250" height="220" class="poems"> 
-                        <img src="images/14.jpg" alt="Ms. Monica Adjei" width="250" height="220" class="poems"> 
-                        <img src="images/12.jpg" alt="Ms. Monica Adjei" width="250" height="220" class="poems"> 
-                        <img src="images/7.jpg" alt="Ms. Monica Adjei" width="250" height="220" class="poems"> 
-                        <img src="images/6.jpg" alt="Ms. Monica Adjei" width="250" height="220" class="poems"> 
-                        <img src="images/11.jpg" alt="Ms. Monica Adjei" width="250" height="220" class="poems"> 
+                    <p class="section-intro">Studio recordings of original spoken word pieces, plus a voice piece recorded for broadcast.</p>
+                    <div class="track-list">
+                        <div class="track">
+                            <h4>African Genius</h4>
+                            <audio controls preload="none">
+                                <source src="images/audio/african-genius.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="track">
+                            <h4>Every Hour</h4>
+                            <audio controls preload="none">
+                                <source src="images/audio/every-hour.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="track">
+                            <h4>Womanhood</h4>
+                            <audio controls preload="none">
+                                <source src="images/audio/womanhood.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="track">
+                            <h4>World at 6 — Jingle</h4>
+                            <span>Broadcast voice piece</span>
+                            <audio controls preload="none">
+                                <source src="images/audio/world-at-6-jingle.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
                     </div>
                 </div>
 
-                
+                <div class="section-block">
+                    <h2>Live Performances</h2>
+                    <p class="section-intro">Footage from recent speaking and performance engagements.</p>
+                    <div class="video-grid">
+                        <div class="portfolio-item">
+                            <video controls preload="metadata" poster="">
+                                <source src="images/video/dsra.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Day of Scientific Renaissance of Africa (2024)</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <video controls preload="metadata">
+                                <source src="images/video/au.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>AU | PeaceFund — The Africa We Want (2024)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h2>Day of Scientific Renaissance of Africa — 2024</h2>
+                    <p class="section-intro">Moments from DSRA 2024.</p>
+                    <div class="gallery" data-gallery="dsra">
+                        <a href="images/web/dsra/full/dsra-01.jpg"><img src="images/web/dsra/thumb/dsra-01.jpg" alt="Day of Scientific Renaissance of Africa photo 1" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-02.jpg"><img src="images/web/dsra/thumb/dsra-02.jpg" alt="Day of Scientific Renaissance of Africa photo 2" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-03.jpg"><img src="images/web/dsra/thumb/dsra-03.jpg" alt="Day of Scientific Renaissance of Africa photo 3" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-04.jpg"><img src="images/web/dsra/thumb/dsra-04.jpg" alt="Day of Scientific Renaissance of Africa photo 4" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-05.jpg"><img src="images/web/dsra/thumb/dsra-05.jpg" alt="Day of Scientific Renaissance of Africa photo 5" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-06.jpg"><img src="images/web/dsra/thumb/dsra-06.jpg" alt="Day of Scientific Renaissance of Africa photo 6" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-07.jpg"><img src="images/web/dsra/thumb/dsra-07.jpg" alt="Day of Scientific Renaissance of Africa photo 7" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-08.jpg"><img src="images/web/dsra/thumb/dsra-08.jpg" alt="Day of Scientific Renaissance of Africa photo 8" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-09.jpg"><img src="images/web/dsra/thumb/dsra-09.jpg" alt="Day of Scientific Renaissance of Africa photo 9" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-10.jpg"><img src="images/web/dsra/thumb/dsra-10.jpg" alt="Day of Scientific Renaissance of Africa photo 10" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-11.jpg"><img src="images/web/dsra/thumb/dsra-11.jpg" alt="Day of Scientific Renaissance of Africa photo 11" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-12.jpg"><img src="images/web/dsra/thumb/dsra-12.jpg" alt="Day of Scientific Renaissance of Africa photo 12" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-13.jpg"><img src="images/web/dsra/thumb/dsra-13.jpg" alt="Day of Scientific Renaissance of Africa photo 13" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-14.jpg"><img src="images/web/dsra/thumb/dsra-14.jpg" alt="Day of Scientific Renaissance of Africa photo 14" loading="lazy"></a>
+                        <a href="images/web/dsra/full/dsra-15.jpg"><img src="images/web/dsra/thumb/dsra-15.jpg" alt="Day of Scientific Renaissance of Africa photo 15" loading="lazy"></a>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h2>Afreximbank Annual Meetings — 2024</h2>
+                    <p class="section-intro">AfriCaribbean Trade and Investment Forum, part of the Afreximbank Annual Meetings.</p>
+                    <div class="gallery" data-gallery="afrexim">
+                        <a href="images/web/afrexim/full/afrexim-01.jpg"><img src="images/web/afrexim/thumb/afrexim-01.jpg" alt="Afreximbank Annual Meetings photo 1" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-02.jpg"><img src="images/web/afrexim/thumb/afrexim-02.jpg" alt="Afreximbank Annual Meetings photo 2" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-03.jpg"><img src="images/web/afrexim/thumb/afrexim-03.jpg" alt="Afreximbank Annual Meetings photo 3" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-04.jpg"><img src="images/web/afrexim/thumb/afrexim-04.jpg" alt="Afreximbank Annual Meetings photo 4" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-05.jpg"><img src="images/web/afrexim/thumb/afrexim-05.jpg" alt="Afreximbank Annual Meetings photo 5" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-06.jpg"><img src="images/web/afrexim/thumb/afrexim-06.jpg" alt="Afreximbank Annual Meetings photo 6" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-07.jpg"><img src="images/web/afrexim/thumb/afrexim-07.jpg" alt="Afreximbank Annual Meetings photo 7" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-08.jpg"><img src="images/web/afrexim/thumb/afrexim-08.jpg" alt="Afreximbank Annual Meetings photo 8" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-09.jpg"><img src="images/web/afrexim/thumb/afrexim-09.jpg" alt="Afreximbank Annual Meetings photo 9" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-10.jpg"><img src="images/web/afrexim/thumb/afrexim-10.jpg" alt="Afreximbank Annual Meetings photo 10" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-11.jpg"><img src="images/web/afrexim/thumb/afrexim-11.jpg" alt="Afreximbank Annual Meetings photo 11" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-12.jpg"><img src="images/web/afrexim/thumb/afrexim-12.jpg" alt="Afreximbank Annual Meetings photo 12" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-13.jpg"><img src="images/web/afrexim/thumb/afrexim-13.jpg" alt="Afreximbank Annual Meetings photo 13" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-14.jpg"><img src="images/web/afrexim/thumb/afrexim-14.jpg" alt="Afreximbank Annual Meetings photo 14" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-15.jpg"><img src="images/web/afrexim/thumb/afrexim-15.jpg" alt="Afreximbank Annual Meetings photo 15" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-16.jpg"><img src="images/web/afrexim/thumb/afrexim-16.jpg" alt="Afreximbank Annual Meetings photo 16" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-17.jpg"><img src="images/web/afrexim/thumb/afrexim-17.jpg" alt="Afreximbank Annual Meetings photo 17" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-18.jpg"><img src="images/web/afrexim/thumb/afrexim-18.jpg" alt="Afreximbank Annual Meetings photo 18" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-19.jpg"><img src="images/web/afrexim/thumb/afrexim-19.jpg" alt="Afreximbank Annual Meetings photo 19" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-20.jpg"><img src="images/web/afrexim/thumb/afrexim-20.jpg" alt="Afreximbank Annual Meetings photo 20" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-21.jpg"><img src="images/web/afrexim/thumb/afrexim-21.jpg" alt="Afreximbank Annual Meetings photo 21" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-22.jpg"><img src="images/web/afrexim/thumb/afrexim-22.jpg" alt="Afreximbank Annual Meetings photo 22" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-23.jpg"><img src="images/web/afrexim/thumb/afrexim-23.jpg" alt="Afreximbank Annual Meetings photo 23" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-24.jpg"><img src="images/web/afrexim/thumb/afrexim-24.jpg" alt="Afreximbank Annual Meetings photo 24" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-25.jpg"><img src="images/web/afrexim/thumb/afrexim-25.jpg" alt="Afreximbank Annual Meetings photo 25" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-26.jpg"><img src="images/web/afrexim/thumb/afrexim-26.jpg" alt="Afreximbank Annual Meetings photo 26" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-27.jpg"><img src="images/web/afrexim/thumb/afrexim-27.jpg" alt="Afreximbank Annual Meetings photo 27" loading="lazy"></a>
+                        <a href="images/web/afrexim/full/afrexim-28.jpg"><img src="images/web/afrexim/thumb/afrexim-28.jpg" alt="Afreximbank Annual Meetings photo 28" loading="lazy"></a>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h2>AU | PeaceFund — The Africa We Want (2024)</h2>
+                    <p class="section-intro">In partnership with Afreximbank.</p>
+                    <div class="gallery" data-gallery="au">
+                        <a href="images/web/au/full/au-01.jpg"><img src="images/web/au/thumb/au-01.jpg" alt="AU PeaceFund — The Africa We Want photo 1" loading="lazy"></a>
+                        <a href="images/web/au/full/au-02.jpg"><img src="images/web/au/thumb/au-02.jpg" alt="AU PeaceFund — The Africa We Want photo 2" loading="lazy"></a>
+                        <a href="images/web/au/full/au-03.jpg"><img src="images/web/au/thumb/au-03.jpg" alt="AU PeaceFund — The Africa We Want photo 3" loading="lazy"></a>
+                        <a href="images/web/au/full/au-04.jpg"><img src="images/web/au/thumb/au-04.jpg" alt="AU PeaceFund — The Africa We Want photo 4" loading="lazy"></a>
+                        <a href="images/web/au/full/au-05.jpg"><img src="images/web/au/thumb/au-05.jpg" alt="AU PeaceFund — The Africa We Want photo 5" loading="lazy"></a>
+                        <a href="images/web/au/full/au-06.jpg"><img src="images/web/au/thumb/au-06.jpg" alt="AU PeaceFund — The Africa We Want photo 6" loading="lazy"></a>
+                        <a href="images/web/au/full/au-07.jpg"><img src="images/web/au/thumb/au-07.jpg" alt="AU PeaceFund — The Africa We Want photo 7" loading="lazy"></a>
+                        <a href="images/web/au/full/au-08.jpg"><img src="images/web/au/thumb/au-08.jpg" alt="AU PeaceFund — The Africa We Want photo 8" loading="lazy"></a>
+                        <a href="images/web/au/full/au-09.jpg"><img src="images/web/au/thumb/au-09.jpg" alt="AU PeaceFund — The Africa We Want photo 9" loading="lazy"></a>
+                        <a href="images/web/au/full/au-10.jpg"><img src="images/web/au/thumb/au-10.jpg" alt="AU PeaceFund — The Africa We Want photo 10" loading="lazy"></a>
+                        <a href="images/web/au/full/au-11.jpg"><img src="images/web/au/thumb/au-11.jpg" alt="AU PeaceFund — The Africa We Want photo 11" loading="lazy"></a>
+                        <a href="images/web/au/full/au-12.jpg"><img src="images/web/au/thumb/au-12.jpg" alt="AU PeaceFund — The Africa We Want photo 12" loading="lazy"></a>
+                    </div>
+                </div>
+
+                <div class="section-block poems">
+                    <h2>Poetry</h2>
+                    <p class="section-intro">Original poems, written and shared across various platforms and events.</p>
+                    <div class="gallery" data-gallery="poems">
+                        <a href="images/web/poems/full/poems-01.jpg"><img src="images/web/poems/thumb/poems-01.jpg" alt="Poem photo 1" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-02.jpg"><img src="images/web/poems/thumb/poems-02.jpg" alt="Poem photo 2" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-03.jpg"><img src="images/web/poems/thumb/poems-03.jpg" alt="Poem photo 3" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-04.jpg"><img src="images/web/poems/thumb/poems-04.jpg" alt="Poem photo 4" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-05.jpg"><img src="images/web/poems/thumb/poems-05.jpg" alt="Poem photo 5" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-06.jpg"><img src="images/web/poems/thumb/poems-06.jpg" alt="Poem photo 6" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-07.jpg"><img src="images/web/poems/thumb/poems-07.jpg" alt="Poem photo 7" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-08.jpg"><img src="images/web/poems/thumb/poems-08.jpg" alt="Poem photo 8" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-09.jpg"><img src="images/web/poems/thumb/poems-09.jpg" alt="Poem photo 9" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-10.jpg"><img src="images/web/poems/thumb/poems-10.jpg" alt="Poem photo 10" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-11.jpg"><img src="images/web/poems/thumb/poems-11.jpg" alt="Poem photo 11" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-12.jpg"><img src="images/web/poems/thumb/poems-12.jpg" alt="Poem photo 12" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-13.jpg"><img src="images/web/poems/thumb/poems-13.jpg" alt="Poem photo 13" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-14.jpg"><img src="images/web/poems/thumb/poems-14.jpg" alt="Poem photo 14" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-15.jpg"><img src="images/web/poems/thumb/poems-15.jpg" alt="Poem photo 15" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-16.jpg"><img src="images/web/poems/thumb/poems-16.jpg" alt="Poem photo 16" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-17.jpg"><img src="images/web/poems/thumb/poems-17.jpg" alt="Poem photo 17" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-18.jpg"><img src="images/web/poems/thumb/poems-18.jpg" alt="Poem photo 18" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-19.jpg"><img src="images/web/poems/thumb/poems-19.jpg" alt="Poem photo 19" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-20.jpg"><img src="images/web/poems/thumb/poems-20.jpg" alt="Poem photo 20" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-21.jpg"><img src="images/web/poems/thumb/poems-21.jpg" alt="Poem photo 21" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-22.jpg"><img src="images/web/poems/thumb/poems-22.jpg" alt="Poem photo 22" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-23.jpg"><img src="images/web/poems/thumb/poems-23.jpg" alt="Poem photo 23" loading="lazy"></a>
+                        <a href="images/web/poems/full/poems-24.jpg"><img src="images/web/poems/thumb/poems-24.jpg" alt="Poem photo 24" loading="lazy"></a>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Footer section -->
             <div id="footer">
-                <p>&copy; Monica Adjei<br>Graduate Student, MSGIS<br>GEOG657, Lab 2</p>
+                <p>&copy; Monica Adjei &middot; Graduate Student, MSGIS</p>
             </div>
-            
         </div>
-    
+
+        <div id="lightbox">
+            <button class="lb-close" aria-label="Close">&times;</button>
+            <button class="lb-prev" aria-label="Previous">&#8249;</button>
+            <img src="" alt="">
+            <button class="lb-next" aria-label="Next">&#8250;</button>
+        </div>
+        <script src="lightbox.js"></script>
     </body>
-
-
-    </html>
-
-
+</html>
